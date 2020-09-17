@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView rapid = findViewById(R.id.picRapid);
-        ImageView mrt = findViewById(R.id.picMRT);
+        ImageView rapid = findViewById(R.id.pic_rapid);
+        ImageView mrt = findViewById(R.id.pic_mrt);
 
 
         Button buttonDriver = findViewById(R.id.buttonDriver);
