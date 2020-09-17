@@ -4,54 +4,62 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button ePassenger;
+    private Button eDriver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView rapid = findViewById(R.id.pic_rapid);
-        ImageView mrt = findViewById(R.id.pic_mrt);
+        //Passenger Button
+//        ePassenger = findViewById(R.id.btnPassenger);
+//        buttonPassenger.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openMap();
+//            }
+//        });
 
-
-        Button buttonDriver = findViewById(R.id.buttonDriver);
-        buttonDriver.setOnClickListener(new View.OnClickListener() {
+        //Driver Button
+        eDriver = findViewById(R.id.btnDriver);
+        eDriver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openlogin();
+                Toast.makeText(MainActivity.this, "You are a driver!", Toast.LENGTH_SHORT).show();
+
+                //add a code to go to new activity
+                Intent intent = new Intent(MainActivity.this, DriverLogin.class);
+                startActivity(intent);
             }
         });
 
-        Button buttonPassenger = findViewById(R.id.buttonPassenger);
-        /*buttonPassenger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openMap();
-            }
-        });*/
+        //Images background
+        ImageView rapid = findViewById(R.id.picRapid);
+        ImageView mrt = findViewById(R.id.picMRT);
     }
 
-    public void openlogin(){
-        Intent intent = new Intent(this, login.class);
-        startActivity(intent);
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.d("try","onStart");
-    }
-
-    @Override
-    protected void onPostResume() {
-        super.onPostResume();
-        Log.d("try","onResume");
-    }
+//    public void openlogin(){
+//        Intent intent = new Intent(mainactthis, login.class);
+//        startActivity(intent);
+//    }
+//
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        Log.d("try","onStart");
+//    }
+//
+//    @Override
+//    protected void onPostResume() {
+//        super.onPostResume();
+//        Log.d("try","onResume");
+//    }
 }
