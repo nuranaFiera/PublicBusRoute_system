@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Images background
-        ImageView rapid = findViewById(R.id.picRapid);
+//        ImageView rapid = findViewById(R.id.picRapid);
         ImageView mrt = findViewById(R.id.picMRT);
     }
 
