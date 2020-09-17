@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "UM Student Public Bus Route"
